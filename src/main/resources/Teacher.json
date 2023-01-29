@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "Tomas",
+    "subject": "Math",
+    "students": [
+      {
+        "id": 1,
+        "name": "Migle",
+        "books": [
+          {
+            "id": 1,
+            "name": "Harry Potter",
+            "price": 29
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Laura",
+        "books": [
+          {
+            "id": 2,
+            "name": "Marry Poppins",
+            "price": 21
+          },
+          {
+            "id": 3,
+            "name": "Math for starters",
+            "price": 7
+          }
+        ]
+      }
+    ]
+  }
+]

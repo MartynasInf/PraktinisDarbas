@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Eastman Kodak",
+    "country": "Benin",
+    "projects": [
+      {
+        "name": "Unbranded Metal Computer",
+        "durationInWeeks": 30,
+        "projectIncome": 242237,
+        "projectCosts": 64886,
+        "addresses": [
+          {
+            "country": "India",
+            "city": "Punjai Puliyampatti"
+          },
+          {
+            "country": "Angola",
+            "city": "Luau"
+          }
+        ],
+        "employees": [
+          {
+            "firstName": "Antonia",
+            "lastName": "Jakubowski"
+          },
+          {
+            "firstName": "Herman",
+            "lastName": "Marquardt"
+          },
+          {
+            "firstName": "Ernestine",
+            "lastName": "Jakubowski"
+          },
+          {
+            "firstName": "Theresa",
+            "lastName": "Herzog"
+          },
+          {
+            "firstName": "Brandon",
+            "lastName": "Kuhic"
+          },
+          {
+            "firstName": "Clyde",
+            "lastName": "Ebert"
+          },
+          {
+            "firstName": "Beth",
+            "lastName": "Heathcote"
+          },
+          {
+            "firstName": "Tyler",
+            "lastName": "Toy"
+          },
+          {
+            "firstName": "Cory",
+            "lastName": "Koepp"
+          }
+        ]
+      },
+      {
+        "name": "Licensed Steel Chair",
+        "durationInWeeks": 12,
+        "projectIncome": 258712,
+        "projectCosts": 124063,
+        "addresses": [
+          {
+            "country": "Greenland",
+            "city": "Qasigiannguit"
+          },
+          {
+            "country": "Burkina Faso",
+            "city": "Koudougou"
+          }
+        ],
+        "employees": [
+          {
+            "firstName": "Katie",
+            "lastName": "Bergnaum"
+          },
+          {
+            "firstName": "Dana",
+            "lastName": "Spinka"
+          },
+          {
+            "firstName": "Kirk",
+            "lastName": "Abshire"
+          },
+          {
+            "firstName": "Jorge",
+            "lastName": "Jones"
+          },
+          {
+            "firstName": "Toni",
+            "lastName": "Reinger"
+          },
+          {
+            "firstName": "Casey",
+            "lastName": "Dooley"
+          },
+          {
+            "firstName": "Debbie",
+            "lastName": "Kertzmann"
+          },
+          {
+            "firstName": "Arturo",
+            "lastName": "Pfeffer"
+          },
+          {
+            "firstName": "Alejandro",
+            "lastName": "Berge"
+          },
+          {
+            "firstName": "Brenda",
+            "lastName": "Green"
+          },
+          {
+            "firstName": "Pauline",
+            "lastName": "Zulauf"
+          },
+          {
+            "firstName": "Lillian",
+            "lastName": "Abbott"
+          },
+          {
+            "firstName": "Louis",
+            "lastName": "Nader"
+          },
+          {
+            "firstName": "Darin",
+            "lastName": "Herzog"
+          },
+          {
+            "firstName": "Ramona",
+            "lastName": "Bogisich"
+          }
+        ]
+      }
+    ]
+  }
+]

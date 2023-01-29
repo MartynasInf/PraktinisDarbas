@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<teacher>
+    <id>1</id>
+    <name>Tomas</name>
+    <subject>Math</subject>
+    <students>
+        <id>1</id>
+        <name>Migle</name>
+        <books>
+            <id>1</id>
+            <name>Harry Potter</name>
+            <price>29</price>
+        </books>
+    </students>
+    <students>
+        <id>2</id>
+        <name>Laura</name>
+        <books>
+            <id>2</id>
+            <name>Marry Poppins</name>
+            <price>21</price>
+        </books>
+        <books>
+            <id>3</id>
+            <name>Math for starters</name>
+            <price>7</price>
+        </books>
+    </students>
+</teacher>

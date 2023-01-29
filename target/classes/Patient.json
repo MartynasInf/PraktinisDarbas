@@ -1,0 +1,30 @@
+[
+  {
+    "patientId": 1,
+    "name": "Tomas",
+    "email": "tomas@gmail.com",
+    "age": 25,
+    "city": "NewYork"
+  },
+  {
+    "patientId": 2,
+    "name": "Jurga",
+    "email": "jurga@gmail.com",
+    "age": 31,
+    "city": "Berlin"
+  },
+  {
+    "patientId": 3,
+    "name": "Mindaugas",
+    "email": "mindaugas@gmail.com",
+    "age": 35,
+    "city": "Klaipeda"
+  },
+  {
+    "patientId": 4,
+    "name": "Rasa",
+    "email": "rasa@gmail.com",
+    "age": 28,
+    "city": "Vilnius"
+  }
+]
