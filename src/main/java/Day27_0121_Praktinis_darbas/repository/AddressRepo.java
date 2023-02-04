@@ -10,7 +10,9 @@ public class AddressRepo extends BaseRepo <Address> {
     @Override
     public List<Address> findAll() {
         session = getSessionFactory().openSession();
-        return session.createQuery("FROM Address", Address.class).list();
+        List<Address> addressList = session.createQuery("FROM Address", Address.class).list();
+        session.close();
+        return addressList;
     }
 
     @Override

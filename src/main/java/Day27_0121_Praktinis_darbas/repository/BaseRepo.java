@@ -8,7 +8,7 @@ import java.util.List;
 
 import static Day27_0121_Praktinis_darbas.utility.HibernateUtilityPW.getSessionFactory;
 
-public abstract class BaseRepo <T> {
+public abstract class BaseRepo<T> {
     public Session session;
     public Transaction transaction;
 
@@ -19,20 +19,23 @@ public abstract class BaseRepo <T> {
         transaction.commit();
         session.close();
     }
-    public void update(Persistable persistable){
+
+    public void update(Persistable persistable) {
         session = getSessionFactory().openSession();
         transaction = session.beginTransaction();
         session.update(persistable);
         transaction.commit();
         session.close();
     }
-    public void delete(Persistable persistable){
+
+    public void delete(Persistable persistable) {
         session = getSessionFactory().openSession();
         transaction = session.beginTransaction();
         session.delete(persistable);
         transaction.commit();
         session.close();
     }
+
     public abstract List<T> findAll();
 
     public abstract void saveList(List<T> givenList);

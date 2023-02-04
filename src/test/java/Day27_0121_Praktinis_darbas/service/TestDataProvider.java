@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class TestDataProvider {
 
-    public List<Customer> providesDataForTest (){
+    public List<Customer> providesCustomersForTest(){
         List<Customer> customers = new ArrayList<>();
 // Customer 1
         Customer customer1 = new Customer();
@@ -86,5 +86,13 @@ public class TestDataProvider {
 
         customers.add(customer2);
         return customers;
+    }
+    public List<Project> providesProjectsListForTests(){
+        List<Customer> customerList = providesCustomersForTest();
+        List<Project> projects = new ArrayList<>();
+        for (Customer customer : customerList) {
+            projects.addAll(customer.getProjects());
+        }
+        return projects;
     }
 }

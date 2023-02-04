@@ -10,7 +10,9 @@ public class ProjectRepo extends BaseRepo <Project> {
     @Override
     public List<Project> findAll() {
         session = getSessionFactory().openSession();
-        return session.createQuery("FROM Project", Project.class).list();
+        List<Project> projects = session.createQuery("FROM Project", Project.class).list();
+        session.close();
+        return projects;
     }
 
     @Override

@@ -11,17 +11,20 @@ public class DataMapperService {
     /**
      * Maps data from JSON to bidirectional join in addresses (projects) and project (customer)
      */
-    public List<Customer> mapsListFromJson(List<Customer> customers){
-        List<Customer> newList = new ArrayList<>();
-        for (Customer customer : customers) {
-            for (Project project : customer.getProjects()) {
-                project.setCustomer(customer);
-                for (Address address : project.getAddresses()) {
-                    address.setProject(project);
+    public List<Customer> mapsListFromJson(List<Customer> customers) {
+        if (!customers.isEmpty() && !customers.contains(null)) {
+            List<Customer> newList = new ArrayList<>();
+            for (Customer customer : customers) {
+                for (Project project : customer.getProjects()) {
+                    project.setCustomer(customer);
+                    for (Address address : project.getAddresses()) {
+                        address.setProject(project);
+                    }
                 }
+                newList.add(customer);
             }
-           newList.add(customer);
+            return newList;
         }
-        return newList;
+        return new ArrayList<>();
     }
 }

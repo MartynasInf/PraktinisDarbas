@@ -2,6 +2,7 @@ package Day27_0121_Praktinis_darbas.service;
 
 import Day27_0121_Praktinis_darbas.entity.Customer;
 import Day27_0121_Praktinis_darbas.entity.Project;
+import Day27_0121_Praktinis_darbas.repository.CustomerRepo;
 
 import java.util.List;
 import java.util.OptionalInt;
@@ -10,7 +11,7 @@ import java.util.stream.Collectors;
 public class CustomerInfoService {
 
     /**
-     * Mothod to find customers with most projects
+     * Method to find customers with most projects
      * @param customers - list of customers to check
      * @return - list of customers
      */
@@ -83,6 +84,7 @@ public class CustomerInfoService {
      * @return - list of customers
      */
     public List<Customer> findMostProfitable(List<Customer> customers){
+
         int mostProfit = customers.stream()
                 .mapToInt(customer -> customer.getProjects().stream()
                         .mapToInt(project -> project.getProjectIncome() - project.getProjectCosts())

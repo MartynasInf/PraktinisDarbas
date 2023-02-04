@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Day27_0121_Praktinis_darbas.service.TestDataProvider
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec

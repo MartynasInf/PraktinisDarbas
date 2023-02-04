@@ -11,7 +11,8 @@ public class EmployeeRepo extends BaseRepo <Employee> {
     @Override
     public List<Employee> findAll() {
         session = getSessionFactory().openSession();
-        return session.createQuery("FROM Employee", Employee.class).list();
+        List<Employee> employees = session.createQuery("FROM Employee", Employee.class).list();
+        return employees;
     }
 
     @Override

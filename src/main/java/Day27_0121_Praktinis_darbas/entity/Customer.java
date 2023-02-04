@@ -1,10 +1,11 @@
 package Day27_0121_Praktinis_darbas.entity;
 
 import Day27_0121_Praktinis_darbas.interfaces.Persistable;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.jetbrains.annotations.NotNull;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -22,7 +23,7 @@ public class Customer implements Serializable, Persistable {
     private String name;
     private String country;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true, fetch=FetchType.EAGER)
-    @NotNull
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @ToString.Exclude
     private List<Project> projects;
 }

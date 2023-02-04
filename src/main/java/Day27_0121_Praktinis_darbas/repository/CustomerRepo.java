@@ -10,9 +10,7 @@ public class CustomerRepo extends BaseRepo<Customer> {
 
     public List<Customer> findAll() {
         session = getSessionFactory().openSession();
-        transaction = session.beginTransaction();
         List<Customer> allCustomers = session.createQuery("FROM Customer", Customer.class).list();
-        transaction.commit();
         session.close();
         return allCustomers;
     }

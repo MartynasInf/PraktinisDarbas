@@ -1,6 +1,7 @@
 package Day27_0121_Praktinis_darbas.entity;
 
 import Day27_0121_Praktinis_darbas.interfaces.Persistable;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ public class Project implements Serializable, Persistable {
     private String name;
     private Integer durationInWeeks;
 
-    @ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "project_employee", joinColumns = @JoinColumn(name = "project_id"), inverseJoinColumns = @JoinColumn(name = "employees_id"))
     private Set<Employee> employees;
 
@@ -35,7 +36,7 @@ public class Project implements Serializable, Persistable {
     @ToString.Exclude
     private Customer customer;
 
-    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true, fetch=FetchType.EAGER)
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Address> addresses;
 
 }
