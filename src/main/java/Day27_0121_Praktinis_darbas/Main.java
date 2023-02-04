@@ -1,29 +1,28 @@
 package Day27_0121_Praktinis_darbas;
 
 
+import Day27_0121_Praktinis_darbas.entity.Address;
 import Day27_0121_Praktinis_darbas.entity.Customer;
 import Day27_0121_Praktinis_darbas.entity.Project;
 import Day27_0121_Praktinis_darbas.repository.*;
-import Day27_0121_Praktinis_darbas.service.CustomerInfoService;
-import Day27_0121_Praktinis_darbas.service.DataMapperService;
-import Day27_0121_Praktinis_darbas.service.JsonService;
-import Day27_0121_Praktinis_darbas.service.ProjectInfoService;
+import Day27_0121_Praktinis_darbas.service.*;
 
 
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, JAXBException {
 
         CustomerRepo customerRepo = new CustomerRepo();
-
+        Address address = new Address();
         JsonService jsonService = new JsonService();
-        List<Customer> customersList = jsonService.fileToList();
+        List<Customer> customersFromJsonFile = jsonService.createsListFromFile();
 
         DataMapperService dataMapperService = new DataMapperService();
-        List<Customer> mappedList = dataMapperService.mapsListFromJson(customersList);
+        List<Customer> mappedList = dataMapperService.mapsListFromJson(customersFromJsonFile);
         customerRepo.saveList(mappedList);
 
         Customer newCustomer = jsonService.createsOneCustomerFromFile();
@@ -50,9 +49,7 @@ public class Main {
         customerInfoService.findLeastProfitable(customersFromDB).forEach(System.out::println);
 
         ProjectRepo projectRepo = new ProjectRepo();
-//        projectRepo.delete(customersFromDB.get(1).getProjects().get(0));
         List<Project> projectsList = projectRepo.findAll();
-
 
         ProjectInfoService projectInfoService = new ProjectInfoService();
         System.out.println("------Projects with most employees-----");
@@ -70,5 +67,8 @@ public class Main {
         System.out.println("------Projects with shortest work time-----");
         projectInfoService.findLShortest(projectsList).forEach(System.out::println);
 
+        XmlService xmlService = new XmlService();
+        xmlService.writeXML(customersFromDB);
+        jsonService.addToJson(customersFromDB);
     }
 }

@@ -2,7 +2,6 @@ package Day27_0121_Praktinis_darbas.service;
 
 import Day27_0121_Praktinis_darbas.entity.Customer;
 import Day27_0121_Praktinis_darbas.entity.Project;
-import Day27_0121_Praktinis_darbas.repository.CustomerRepo;
 
 import java.util.List;
 import java.util.OptionalInt;

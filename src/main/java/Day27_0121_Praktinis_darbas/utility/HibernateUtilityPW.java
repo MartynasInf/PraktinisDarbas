@@ -1,8 +1,5 @@
 package Day27_0121_Praktinis_darbas.utility;
 
-import Day26_0114.TeamWork.entity.Book;
-import Day26_0114.TeamWork.entity.Student;
-import Day26_0114.TeamWork.entity.Teacher;
 import Day27_0121_Praktinis_darbas.entity.Address;
 import Day27_0121_Praktinis_darbas.entity.Customer;
 import Day27_0121_Praktinis_darbas.entity.Employee;

@@ -6,7 +6,7 @@ import java.util.List;
 
 import static Day27_0121_Praktinis_darbas.utility.HibernateUtilityPW.getSessionFactory;
 
-public class EmployeeRepo extends BaseRepo <Employee> {
+public class EmployeeRepo extends BaseRepo<Employee> {
 
     @Override
     public List<Employee> findAll() {

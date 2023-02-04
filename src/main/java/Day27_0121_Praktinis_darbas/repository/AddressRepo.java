@@ -6,7 +6,7 @@ import java.util.List;
 
 import static Day27_0121_Praktinis_darbas.utility.HibernateUtilityPW.getSessionFactory;
 
-public class AddressRepo extends BaseRepo <Address> {
+public class AddressRepo extends BaseRepo<Address> {
     @Override
     public List<Address> findAll() {
         session = getSessionFactory().openSession();

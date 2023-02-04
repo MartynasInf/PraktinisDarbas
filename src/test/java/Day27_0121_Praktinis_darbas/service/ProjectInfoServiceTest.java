@@ -12,7 +12,7 @@ class ProjectInfoServiceTest {
 
     TestDataProvider testDataProvider = new TestDataProvider();
     ProjectInfoService projectInfoService = new ProjectInfoService();
-    List<Project> testProjectsList = testDataProvider.providesProjectsListForTests();
+    List<Project> testProjectsList = testDataProvider.providesProjectsForTests();
     List<Project> resultList;
 
     @Test

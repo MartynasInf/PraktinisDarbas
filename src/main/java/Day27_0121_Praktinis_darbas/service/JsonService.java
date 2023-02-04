@@ -1,10 +1,12 @@
 package Day27_0121_Praktinis_darbas.service;
 
+import Day26_0114.TeamWork.entity.Teacher;
 import Day27_0121_Praktinis_darbas.entity.Customer;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,7 +15,7 @@ import java.util.List;
 
 public class JsonService {
 
-    public List<Customer> fileToList() throws IOException {
+    public List<Customer> createsListFromFile() throws IOException {
         String file = "src/main/resources/DataProvider.json";
         String json = new String(Files.readAllBytes(Paths.get(file)));
         ObjectMapper mapper = new ObjectMapper();
@@ -36,5 +38,13 @@ public class JsonService {
             return newCustomer.get(0);
         }
         return null;
+    }
+
+    public void addToJson(List<Customer> customers) {
+        try {
+            new ObjectMapper().writeValue(new File("src/main/resources/output.json"), customers);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -87,7 +87,7 @@ public class TestDataProvider {
         customers.add(customer2);
         return customers;
     }
-    public List<Project> providesProjectsListForTests(){
+    public List<Project> providesProjectsForTests(){
         List<Customer> customerList = providesCustomersForTest();
         List<Project> projects = new ArrayList<>();
         for (Customer customer : customerList) {
