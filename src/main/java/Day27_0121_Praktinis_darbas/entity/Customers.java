@@ -1,5 +1,9 @@
 package Day27_0121_Praktinis_darbas.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -9,23 +13,11 @@ import java.util.List;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Customers implements Serializable {
 
     @XmlElement(name = "customer")
     private List<Customer> customers;
-
-    public Customers() {
-    }
-
-    public Customers(List<Customer> customers) {
-        this.customers = customers;
-    }
-
-    public List<Customer> getCustomers() {
-        return customers;
-    }
-
-    public void setCustomers(List<Customer> customers) {
-        this.customers = customers;
-    }
 }

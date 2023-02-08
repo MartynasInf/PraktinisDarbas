@@ -25,6 +25,7 @@ public class HibernateUtilityPW {
                 properties.put(Environment.URL, "jdbc:mysql://localhost:3306/praktinis_darbas?serverTimezone=UTC");
 //                properties.put(Environment.DRIVER, "org.h2.Driver");
 //                properties.put(Environment.URL, "jdbc:h2:file:C:/temp/test;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE");
+//                properties.put(Environment.URL, "jdbc:h2:~/test");
                 properties.put(Environment.USER, "root");
                 properties.put(Environment.PASS, "root");
 //                properties.put(Environment.USER, "sa");

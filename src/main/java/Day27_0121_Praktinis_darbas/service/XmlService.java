@@ -13,7 +13,7 @@ import java.util.List;
 
 public class XmlService {
     public void writeXML(List<Customer> customers) throws JAXBException {
-        File file = new File("src/main/resources/PraktinisDarbas.xml");
+        File file = new File("src/main/resources/XmlExportedData.xml");
         JAXBContext jaxbContext = JAXBContext.newInstance(Customers.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
 

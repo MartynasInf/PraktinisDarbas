@@ -9,7 +9,6 @@ import lombok.ToString;
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,7 +17,6 @@ import java.util.List;
 @NoArgsConstructor
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlSeeAlso(ArrayList.class)
 public class Customer implements Serializable, Persistable {
 
     @Id
@@ -29,6 +27,5 @@ public class Customer implements Serializable, Persistable {
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @ToString.Exclude
-    @XmlElementWrapper
     private List<Project> projects;
 }

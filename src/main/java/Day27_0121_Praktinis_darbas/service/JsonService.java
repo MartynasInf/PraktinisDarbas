@@ -42,7 +42,7 @@ public class JsonService {
 
     public void addToJson(List<Customer> customers) {
         try {
-            new ObjectMapper().writeValue(new File("src/main/resources/output.json"), customers);
+            new ObjectMapper().writeValue(new File("src/main/resources/JsonExportedData.json"), customers);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
